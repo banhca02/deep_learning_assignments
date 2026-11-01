@@ -69,6 +69,5 @@ Các notebook sử dụng **chung dữ liệu MNIST** nhưng chạy độc lập
 ## 6. Mã nguồn và báo cáo
 
 - Repository: https://github.com/banhca02/deep_learning_assignments.git
-- Báo cáo tổng hợp: xem tệp PDF của dự án (nếu được đưa vào repository).
+- Báo cáo tổng hợp: xem tệp PDF của dự án tại reports/exercises.pdf.
 
-**Ghi chú:** README này mô tả cách chạy các notebook hiện tại; tên tệp và thư mục trên GitHub cần được đối chiếu với cấu trúc repository thực tế.
