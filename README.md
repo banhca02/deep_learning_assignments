@@ -71,3 +71,10 @@ Các notebook sử dụng **chung dữ liệu MNIST** nhưng chạy độc lập
 - Repository: https://github.com/banhca02/deep_learning_assignments.git
 - Báo cáo tổng hợp: xem tệp PDF của dự án tại reports/exercises.pdf.
 
+## 7. Đề xuất A1.1 và A2.1
+
+| Mốc | Chủ đề | Báo cáo PDF |
+|---|---|---|
+| A1.1 | So sánh ResNet-18 và ViT-Tiny trên CIFAR-100 | [A1.1-proposal.pdf](A1/A1.1-proposal.pdf) |
+| A2.1 | YOLOv4 trên PASCAL VOC 2007; khảo sát Mosaic Augmentation | [A2.1-proposal.pdf](A2/A2.1-proposal.pdf) |
+

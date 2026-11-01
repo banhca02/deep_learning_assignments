@@ -1,1 +1,20 @@
-<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>A2 | CO5085</title><link rel="stylesheet" href="../assets/css/site.css"></head><body><header class="site-header"><div class="container header-inner"><a class="brand" href="../index.html">CO5085 <span>·</span> Portfolio</a><nav class="nav"><a href="../index.html">Trang chủ</a><a href="../E1/">E1</a><a href="../E2/">E2</a><a href="../E3/">E3</a><a href="../A1/">A1</a></nav></div></header><section class="hero"><div class="container"><p class="eyebrow">Assignment 02</p><h1>A2 — Chủ đề CV + paper</h1></div></section><main class="container"></main><footer class="site-footer"><div class="container"><p><a href="../index.html">← Trang chủ</a></p></div></footer></body></html>
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Đề xuất A2.1: phát hiện đối tượng bằng YOLOv4 trên PASCAL VOC 2007.">
+  <title>A2.1 — YOLOv4 | CO5085</title>
+  <link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body>
+  <header class="site-header"><div class="container header-inner"><a class="brand" href="../index.html">CO5085 <span>·</span> Portfolio</a><nav class="nav" aria-label="Điều hướng"><a href="../index.html">Trang chủ</a><a href="../E1/">E1</a><a href="../E2/">E2</a><a href="../E3/">E3</a><a href="../A1/">A1</a></nav></div></header>
+  <section class="hero"><div class="container"><p class="eyebrow">Assignment 02 · A2.1</p><h1>Phát hiện đối tượng bằng YOLOv4</h1><p>Khảo sát tác động của Mosaic Augmentation đến hiệu quả phát hiện đối tượng trên PASCAL VOC 2007.</p><div class="hero-actions"><a class="button" href="A2.1-proposal.pdf">Đọc đề xuất A2.1 (PDF)</a></div></div></section>
+  <main class="container">
+    <section class="details"><div><h2 class="section-title">Bài toán và dữ liệu</h2><p class="section-intro">PASCAL VOC 2007 là tập dữ liệu phát hiện đối tượng với 20 lớp. Tập test chính thức được giữ nguyên; 5.011 ảnh trainval được chia train/validation ở cấp độ ảnh với seed 42.</p></div><div class="card"><ul class="info-list"><li><strong>Train</strong>4.008 ảnh</li><li><strong>Validation</strong>1.003 ảnh</li><li><strong>Test</strong>4.952 ảnh</li><li><strong>Nguồn dữ liệu</strong><a href="http://host.robots.ox.ac.uk/pascal/VOC/">PASCAL VOC</a></li></ul></div></section>
+    <section><h2 class="section-title">Paper phân tích</h2><div class="card"><h3>YOLOv4: Optimal Speed and Accuracy of Object Detection</h3><p>A. Bochkovskiy, C.-Y. Wang, H.-Y. M. Liao (2020), arXiv:2004.10934.</p><p>Đề xuất tập trung vào Mosaic Augmentation trong YOLOv4 và thiết kế một phép so sánh có kiểm soát trên VOC 2007, không tái hiện toàn bộ thí nghiệm trên MS COCO của paper.</p><p><a href="https://arxiv.org/abs/2004.10934">Đọc paper →</a></p></div></section>
+    <section><h2 class="section-title">Kế hoạch A2.2</h2><p class="section-intro">Hai cấu hình YOLOv4 dự kiến dùng cùng split và khởi tạo pretrained, chỉ khác việc sử dụng Mosaic trong huấn luyện. Đây là kế hoạch thí nghiệm, chưa phải kết quả đánh giá.</p><div class="table-wrap"><table><thead><tr><th>Cấu hình</th><th>Augmentation</th><th>Đánh giá dự kiến</th></tr></thead><tbody><tr><td>Baseline</td><td>Các phép tăng cường dữ liệu cơ bản, không Mosaic.</td><td>mAP@0.5</td></tr><tr><td>Mosaic</td><td>Các phép cơ bản kết hợp Mosaic trên train.</td><td>mAP@0.5</td></tr></tbody></table></div><p>Các chỉ số bổ sung dự kiến: mAP@0.5:0.95, precision, recall và tốc độ suy luận. Mosaic không áp dụng cho validation/test.</p></section>
+  </main>
+  <footer class="site-footer"><div class="container"><p><a href="../index.html">← Trang chủ</a></p></div></footer>
+</body>
+</html>

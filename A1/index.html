@@ -1,1 +1,20 @@
-<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>A1 | CO5085</title><link rel="stylesheet" href="../assets/css/site.css"></head><body><header class="site-header"><div class="container header-inner"><a class="brand" href="../index.html">CO5085 <span>·</span> Portfolio</a><nav class="nav"><a href="../index.html">Trang chủ</a><a href="../E1/">E1</a><a href="../E2/">E2</a><a href="../E3/">E3</a><a href="../A2/">A2</a></nav></div></header><section class="hero"><div class="container"><p class="eyebrow">Assignment 01</p><h1>A1 — CNN vs Transformer</h1></div></section><main class="container"></main><footer class="site-footer"><div class="container"><p><a href="../index.html">← Trang chủ</a></p></div></footer></body></html>
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Đề xuất A1.1: CNN vs Transformer trên CIFAR-100.">
+  <title>A1.1 — CNN vs Transformer | CO5085</title>
+  <link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body>
+  <header class="site-header"><div class="container header-inner"><a class="brand" href="../index.html">CO5085 <span>·</span> Portfolio</a><nav class="nav" aria-label="Điều hướng"><a href="../index.html">Trang chủ</a><a href="../E1/">E1</a><a href="../E2/">E2</a><a href="../E3/">E3</a><a href="../A2/">A2</a></nav></div></header>
+  <section class="hero"><div class="container"><p class="eyebrow">Assignment 01 · A1.1</p><h1>CNN vs Transformer trên CIFAR-100</h1><p>Đề xuất nghiên cứu so sánh ResNet-18 và Vision Transformer Tiny trên tập ảnh 100 lớp.</p><div class="hero-actions"><a class="button" href="A1.1-proposal.pdf">Đọc đề xuất A1.1 (PDF)</a></div></div></section>
+  <main class="container">
+    <section class="details"><div><h2 class="section-title">Bộ dữ liệu</h2><p class="section-intro">CIFAR-100 gồm 60.000 ảnh RGB 32 × 32 thuộc 100 lớp. Tập test gốc được giữ riêng; train/validation được tách có phân tầng theo nhãn với seed 42.</p></div><div class="card"><ul class="info-list"><li><strong>Train</strong>45.000 ảnh</li><li><strong>Validation</strong>5.000 ảnh</li><li><strong>Test</strong>10.000 ảnh</li><li><strong>Nguồn dữ liệu</strong><a href="https://www.cs.toronto.edu/~kriz/cifar.html">CIFAR-100</a></li></ul></div></section>
+    <section><h2 class="section-title">Mô hình và thiết kế thí nghiệm</h2><div class="grid two"><article class="card"><h3>ResNet-18 · CNN</h3><p>Kiến trúc CNN được lựa chọn làm baseline phân loại 100 lớp.</p></article><article class="card"><h3>ViT-Tiny · Transformer</h3><p>Vision Transformer Tiny được lựa chọn để so sánh với CNN trên cùng split dữ liệu.</p></article></div></section>
+    <section><h2 class="section-title">Kế hoạch A1.2</h2><p class="section-intro">Đề xuất thiết kế bốn chế độ cho mỗi kiến trúc; đây là kế hoạch thực nghiệm, không phải kết quả huấn luyện.</p><div class="table-wrap"><table><thead><tr><th>Mô hình</th><th>Các chế độ dự kiến</th></tr></thead><tbody><tr><td>ResNet-18</td><td>From scratch; pretrained + freeze backbone; pretrained + partial freeze; pretrained + full fine-tune.</td></tr><tr><td>ViT-Tiny</td><td>From scratch; pretrained + freeze backbone; pretrained + partial freeze; pretrained + full fine-tune.</td></tr></tbody></table></div><p>Ảnh train dự kiến được resize, chuẩn hóa và tăng cường dữ liệu; validation/test dùng phép biến đổi xác định. Các chỉ số dự kiến gồm accuracy, macro-F1, confusion matrix, thời gian huấn luyện và số tham số trainable.</p></section>
+  </main>
+  <footer class="site-footer"><div class="container"><p><a href="../index.html">← Trang chủ</a></p></div></footer>
+</body>
+</html>
